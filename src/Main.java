@@ -81,8 +81,33 @@ public class Main {
     public static void task5() {
         System.out.println("Задача 5:");
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the month number:");
         int monthNumber = sc.nextInt();//вводим месяц
-        if (monthNumber == 12 || monthNumber < 3) {
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Winter");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Spring");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Summer");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Autumn");
+                break;
+            default:
+                System.out.println("Not valid month");
+        }
+        /*if (monthNumber == 12 || monthNumber < 3) {
             System.out.println("Зима");
         } else if (monthNumber < 6) {
             System.out.println("Весна");
@@ -90,6 +115,6 @@ public class Main {
             System.out.println("Лето");
         } else if (monthNumber < 12) {
             System.out.println("Осень");
-        } else System.out.println("Не валидный месяц");
+        } else System.out.println("Не валидный месяц");*/
     }
 }
